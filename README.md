@@ -94,6 +94,27 @@ password-manager/             <-- Project Root
     ├── schemas/              (__init__.py, auth.py, vault.py)
     └── static/               (index.html, app.js)
 
+---
+
+## 🚀 How to Run (Quick Start)
+
+**Prerequisites:** Running Docker Desktop.
+
+1. **Create the `.env` file** (in the VS Code terminal):
+   ```bash
+   cp .env.example .env
+(Windows PowerShell alternative: Copy-Item .env.example .env)
+
+Build and start the container:
+
+bash
+docker compose up -d --build
+Open in your browser:
+👉 http://localhost:8000
+
+Set your Master Password (minimum 8 characters).
+⚠️ IMPORTANT: Do not forget it! Password recovery is impossible.
+
 ----------------------------------------------------------
 
 # 🔐 Локальный менеджер паролей
