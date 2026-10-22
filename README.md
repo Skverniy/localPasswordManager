@@ -138,3 +138,23 @@ password-manager/             <-- Корень проекта
     ├── models/               (__init__.py, user.py, vault_item.py)
     ├── schemas/              (__init__.py, auth.py, vault.py)
     └── static/               (index.html, app.js)
+
+---
+
+## 🚀 Как запустить (Кратко)
+
+**Требования:** Запущенный Docker Desktop.
+
+1. **Создайте файл `.env`** (в терминале VS Code в папке проекта):
+   ```powershell
+Copy-Item .env.example .env
+Соберите и запустите контейнер:
+
+powershell
+docker compose up -d --build
+Откройте в браузере:
+👉 http://localhost:8000
+
+Задайте Мастер-пароль (минимум 8 символов).
+⚠️ ВАЖНО: Не забудьте его! Восстановить пароль невозможно.
+
