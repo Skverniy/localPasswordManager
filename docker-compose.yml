@@ -1,0 +1,13 @@
+services:
+  vault:
+    build: .
+    container_name: password-manager
+    ports:
+      - "127.0.0.1:8000:8000"   # только локально, не наружу
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DB_PATH=/app/data/vault.db
+      - JWT_SECRET=${JWT_SECRET:-}
+      - SESSION_TTL_MINUTES=${SESSION_TTL_MINUTES:-30}
+    restart: unless-stopped
